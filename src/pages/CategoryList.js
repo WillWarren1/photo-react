@@ -1,13 +1,21 @@
 import React, { Component } from 'react'
 import { Link } from 'react-router-dom'
+import data from '../data/photoalbum.json'
 class CategoryList extends Component {
   render() {
+    console.log(Object.keys(data))
+    const jsonArray = Object.keys(data)
     return (
       <>
-        <Link to="/photo_list">
-          <h2>Pandas</h2>
-        </Link>
-        <h2>Miniatures</h2>
+        <main>
+          {jsonArray.map((category, index) => {
+            return (
+              <Link key={index} to={'/photo_list' + index}>
+                <h2>{category}</h2>
+              </Link>
+            )
+          })}
+        </main>
       </>
     )
   }
