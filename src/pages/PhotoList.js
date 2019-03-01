@@ -9,7 +9,8 @@ class PhotoList extends Component {
     const imageStyle = {
       width: '30rem'
     }
-    const category = data.this.props.match.params.index
+
+    // const category = data.this.props.match.params.index
     return (
       <>
         <main>
