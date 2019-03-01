@@ -7,6 +7,7 @@ class PhotoDetail extends Component {
   render() {
     const category = Object.keys(data)
     const picture = data.pandas.photos[this.props.match.params.index]
+    console.log(category)
     return (
       // {console.log(this.props)}
       // {console.log(Object.keys(data))}
