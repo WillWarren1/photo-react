@@ -6,7 +6,7 @@ import Photo from '../components/photo.js'
 class PhotoDetail extends Component {
   render() {
     const category = Object.keys(data)
-    const picture = data.pandas.photos[this.props.match.params.index]
+    const picture = data.miniatures.photos[this.props.match.params.index]
     console.log(category)
     return (
       // {console.log(this.props)}

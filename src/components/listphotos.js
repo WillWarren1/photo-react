@@ -7,9 +7,9 @@ class ListPhotos extends Component {
     return (
       <>
         <main>
-          {data.miniatures.photos.map((photo, index) => {
+          {this.props.hobby.map((photo, index) => {
             return (
-              <Link key={index} to={'/pandas/' + index}>
+              <Link key={index} to={'/hobby/' + index}>
                 <Photo
                   className="thumbnail"
                   picture={photo.imageURL}

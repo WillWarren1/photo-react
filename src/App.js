@@ -13,7 +13,7 @@ class App extends Component {
           <Switch>
             <Route exact path="/" component={CategoryList} />
             <Route exact path="/photo_list/:index" component={PhotoList} />
-            <Route exact path="/pandas/:index" component={PhotoDetail} />
+            <Route exact path="/hobby/:index" component={PhotoDetail} />
             <Route component={ErrorPage404} />
           </Switch>
         </Router>
