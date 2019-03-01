@@ -10,11 +10,17 @@ class Category extends Component {
         <main>
           {jsonKeys.map((category, index) => {
             return (
-              <>
-                <Link key={index} to={'/photo_list/' + index}>
-                  <h2>{category}</h2>
+              <section key={index}>
+                <Link to={`/${category}`}>
+                  <h2>{data[category].title}</h2>
+                  <img
+                    className="thumbnail"
+                    src={data[category].photos[0].imageURL}
+                    alt={data[category].photos[0].imageTitle}
+                  />
                 </Link>
-              </>
+                <p>{data[category].description}</p>
+              </section>
             )
           })}
         </main>

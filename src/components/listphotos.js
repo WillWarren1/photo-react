@@ -1,23 +1,28 @@
 import React, { Component } from 'react'
 import Photo from './photo'
-// import data from '../data/photoalbum.json'
+
 import { Link } from 'react-router-dom'
 class ListPhotos extends Component {
   render() {
+    // const ugh = data[this.props.match.params.category]
+    console.log(this.props)
     return (
       <>
         <main>
-          {this.props.hobby.map((photo, index) => {
-            return (
-              <Link key={index} to={'/hobby/' + index}>
-                <Photo
-                  className="thumbnail"
-                  picture={photo.imageURL}
-                  title={photo.title}
-                />
-              </Link>
-            )
-          })}
+          <section>
+            {this.props.hobby.photos.map((photo, index) => {
+              return (
+                <Link key={index} to={`/${this.props.hobbyKey}/${index}`}>
+                  <Photo
+                    className="thumbnail"
+                    picture={photo.imageURL}
+                    title={photo.title}
+                    source={photo.sourceURL}
+                  />
+                </Link>
+              )
+            })}
+          </section>
         </main>
       </>
     )

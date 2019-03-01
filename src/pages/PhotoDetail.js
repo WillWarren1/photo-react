@@ -4,14 +4,13 @@ import data from '../data/photoalbum.json'
 import Photo from '../components/photo.js'
 
 class PhotoDetail extends Component {
-  state = {}
   render() {
-    const picture = data.miniatures.photos[this.props.match.params.index]
-
+    const picture = data[this.props.match.params.category]
     return (
-      // {console.log(this.props)}
-      // {console.log(Object.keys(data))}
-      <Photo picture={picture.imageURL} title={picture.title} />
+      <Photo
+        picture={picture.photos[this.props.match.params.index].imageURL}
+        title={picture.photos[this.props.match.params.index].title}
+      />
     )
   }
 }

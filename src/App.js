@@ -12,8 +12,8 @@ class App extends Component {
         <Router>
           <Switch>
             <Route exact path="/" component={CategoryList} />
-            <Route exact path="/photo_list/:index" component={PhotoList} />
-            <Route exact path="/hobby/:index" component={PhotoDetail} />
+            <Route exact path="/:category" component={PhotoList} />
+            <Route exact path="/:category/:index" component={PhotoDetail} />
             <Route component={ErrorPage404} />
           </Switch>
         </Router>

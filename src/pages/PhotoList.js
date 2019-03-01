@@ -10,13 +10,20 @@ class PhotoList extends Component {
     // hobbies: ,
     choiceHobby: data.pandas.photos
   }
+
   render() {
+    console.log(this.props.match.params.category)
+    const currentCategory = data[this.props.match.params.category]
+    console.log(currentCategory)
     // const category = data.this.props.match.params.index
     // console.log(category)
     return (
       <>
         {/* <Link to=""> */}
-        <ListPhotos hobby={this.state.choiceHobby} />
+        <ListPhotos
+          hobby={currentCategory}
+          hobbyKey={this.props.match.params.category}
+        />
         {/* </Link> */}
       </>
     )
