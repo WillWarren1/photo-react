@@ -1,6 +1,6 @@
 import React, { Component } from 'react'
 import Photo from './photo'
-import data from '../data/photoalbum.json'
+// import data from '../data/photoalbum.json'
 import { Link } from 'react-router-dom'
 class ListPhotos extends Component {
   render() {

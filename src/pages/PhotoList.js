@@ -7,14 +7,16 @@ import ListPhotos from '../components/listphotos.js'
 
 class PhotoList extends Component {
   state = {
-    hobbies: data.pandas.photos
+    // hobbies: ,
+    choiceHobby: data.pandas.photos
   }
   render() {
     // const category = data.this.props.match.params.index
+    // console.log(category)
     return (
       <>
         {/* <Link to=""> */}
-        <ListPhotos hobby={this.state.hobbies} />
+        <ListPhotos hobby={this.state.choiceHobby} />
         {/* </Link> */}
       </>
     )
